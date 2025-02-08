@@ -1,0 +1,222 @@
+/* Header Styles */
+:root {
+    --header-bg: #ffffff;
+    --header-text: #4a5568;
+    --header-brand-gradient-start: darkorange;;
+    --header-brand-gradient-end:  darkorange;;
+    --header-hover-color: darkorange;;
+    --header-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --header-transition: all 0.3s ease;
+  }
+  
+  .header {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transition: var(--header-transition);
+   
+  }
+  
+  .header-scrolled {
+    top: 1rem;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .header-wrapper {
+    background-color: var(--header-bg);
+    border-radius: 0.75rem;
+    box-shadow: var(--header-shadow);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--header-transition);
+  }
+  
+  .header-wrapper-scrolled {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .header-logo {
+    text-decoration: none;
+  }
+  
+  .header-brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--header-brand-gradient-start), var(--header-brand-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .header-desktop-nav {
+    display: none;
+  }
+  
+  .header-mobile-menu-toggle {
+    color: var(--header-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 768px) {
+    .header-desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .header-nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+  
+    .header-nav-link {
+      text-decoration: none;
+      color: var(--header-text);
+      transition: var(--header-transition);
+      position: relative;
+      padding: 0.5rem 0;
+    }
+  
+    .header-nav-link:hover {
+      color: var(--header-hover-color);
+    }
+  
+    .header-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--header-hover-color);
+      transition: var(--header-transition);
+    }
+  
+    .header-nav-link:hover::after {
+      width: 100%;
+    }
+  
+    .header-cta-button {
+      background: linear-gradient(to right, var(--header-brand-gradient-start), var(--header-brand-gradient-end));
+      color: white;
+      border: none;
+      padding: 0.625rem 1.25rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: var(--header-transition);
+      transform: translateY(0);
+    }
+  
+    .header-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  
+    .header-mobile-menu-toggle {
+      display: none;
+    }
+  }
+  /* Add these styles to your existing CSS */
+.header-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .header-cta-button.login-btn {
+    background: transparent;
+    color: var(--header-text);
+    border: 2px solid var(--header-brand-gradient-start);
+  }
+  
+  .header-cta-button.login-btn:hover {
+    background: var(--header-brand-gradient-start);
+    color: white;
+  }
+  
+  .header-mobile-nav-content .login-btn {
+    background: transparent;
+    color: var(--header-text);
+    border: 2px solid var(--header-brand-gradient-start);
+  }
+  
+  .header-mobile-nav-content .login-btn:hover {
+    background: var(--header-brand-gradient-start);
+    color: white;
+  }
+  /* Mobile Navigation */
+  .header-mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header-mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .header-mobile-nav-link {
+    text-decoration: none;
+    color: var(--header-text);
+    font-size: 1.25rem;
+    transition: var(--header-transition);
+  }
+  
+  .header-mobile-nav-link:hover {
+    color: var(--header-hover-color);
+  }
+  
+  .header-mobile-cta-button {
+    background: linear-gradient(to right, var(--header-brand-gradient-start), var(--header-brand-gradient-end));
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  /* Accessibility and Interaction Enhancements */
+  @media (prefers-reduced-motion: reduce) {
+    .header,
+    .header-wrapper,
+    .header-nav-link,
+    .header-mobile-nav {
+      transition: none;
+    }
+  }

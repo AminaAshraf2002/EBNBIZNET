@@ -1,0 +1,405 @@
+/* Root Variables */
+:root {
+    --primary-color: darkorange;;
+    --primary-hover: #e65c00;
+    --background-color: #ffffff;
+    --text-dark: #1f1e1e;
+    --text-light: #353434;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Base Carousel Section */
+  .carousel-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Header Styles */
+  .carousel-header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--background-color);
+  }
+  
+  .carousel-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .carousel-header p {
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+  
+  /* Container and Track */
+  .carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Slide Styles */
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    position: relative;
+    height: 500px;
+  }
+  
+  .slide-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+  }
+  
+  /* Content Card Styles */
+  .content-card {
+    position: absolute;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.336);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Alternating Card Positions */
+  .carousel-slide:nth-child(3n+1) .content-card {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-slide:nth-child(3n+2) .content-card {
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-slide:nth-child(3n+3) .content-card {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Card Header */
+  .card-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+  }
+  
+  .card-header h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+  
+  /* Company Info */
+  .company-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .info-item svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+  }
+  
+  /* Company Description */
+  .company-description {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+  
+  /* Achievements Section */
+  .achievements {
+    margin-bottom: 1rem;
+  }
+  
+  .achievements h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+  
+  .achievements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .achievements li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    padding: 0.5rem;
+    background: rgba(255, 107, 0, 0.05);
+    border-radius: 5px;
+    transition: var(--transition);
+  }
+  
+  .achievements li:hover {
+    background: rgba(255, 107, 0, 0.1);
+  }
+  
+  .achievements li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+  }
+  
+  /* Button Styles */
+  .view-profile {
+    width: 100%;
+    padding: 0.75rem;
+    background: darkorange; ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .view-profile:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+  }
+  
+  .view-profile svg {
+    width: 16px;
+    height: 16px;
+    transition: var(--transition);
+  }
+  
+  .view-profile:hover svg {
+    transform: translateX(3px);
+  }
+  
+  /* Navigation Controls */
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+  }
+  
+  .carousel-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .carousel-nav.prev {
+    left: 20px;
+  }
+  
+  .carousel-nav.next {
+    right: 20px;
+  }
+  
+  .carousel-nav svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-dark);
+  }
+  
+  /* Indicators */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .indicator.active {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content-card {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content-card {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-slide {
+      height: 600px;
+    }
+  
+    .content-card {
+      width: 80%;
+      left: 50% !important;
+      right: auto !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  
+    .carousel-nav {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .carousel-nav.prev {
+      left: 10px;
+    }
+  
+    .carousel-nav.next {
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-header {
+      padding: 1.5rem 0;
+    }
+  
+    .carousel-header h2 {
+      font-size: 1.3rem;
+    }
+  
+    .content-card {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    .company-logo {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .card-header h3 {
+      font-size: 1.1rem;
+    }
+  
+    .company-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track,
+    .content-card,
+    .view-profile,
+    .carousel-nav,
+    .indicator {
+      transition: none;
+      animation: none;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .carousel-nav,
+    .carousel-indicators {
+      display: none;
+    }
+  
+    .carousel-slide {
+      break-inside: avoid;
+    }
+  }

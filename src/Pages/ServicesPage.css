@@ -1,0 +1,394 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --background-color: #f4f8f9;
+    --white: #ffffff;
+    --shadow-subtle: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-medium: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .ebnbiznet-service-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  .service-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 400px;
+    background-image: url('../assets/service2.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+  }
+  
+  .service-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+  }
+  
+  .service-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .service-hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Start Business Section */
+  .service-start-business-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--background-color);
+  }
+  
+  .service-start-business-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .service-business-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .service-business-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  
+  .service-business-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-business-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .service-card-content {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .service-card-content .service-card-icon {
+    color: var(--accent-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
+  
+  .service-card-content p {
+    color: var(--text-color);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  /* Customer Relationships Section */
+  .service-customer-relationships-section {
+    display: flex;
+    padding: 4rem 5%;
+    background-color: var(--white);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .service-relationships-content {
+    flex: 1 1 300px;
+  }
+  
+  .service-relationships-content h2 {
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .service-relationships-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-relationships-content button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  .service-relationships-content button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .service-relationships-images {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    flex: 1 1 300px;
+  }
+  
+  .service-relationships-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .service-stat-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .service-stat-badge span {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    display: block;
+    line-height: 1;
+  }
+  
+  .service-stat-badge p {
+    margin-top: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+  
+  /* Membership Section */
+  .service-membership-section {
+    padding: 4rem 5%;
+    background-color: var(--background-color);
+    text-align: center;
+  }
+  
+  .service-membership-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .service-membership-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .service-membership-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-membership-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-membership-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+  
+  .service-membership-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .service-membership-card li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  /* Belief Section */
+  .service-belief-section {
+    padding: 4rem 5%;
+    background-color: var(--white);
+  }
+  
+  .service-belief-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .service-belief-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .service-belief-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    flex: 2 1 600px;
+  }
+  
+  .service-belief-service {
+    background-color: var(--background-color);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-belief-service:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-belief-service svg {
+    width: 50px;
+    height: 50px;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+  
+  .service-belief-service h3 {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-belief-service p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  .service-belief-image {
+    flex: 1 1 300px;
+  }
+  
+  .service-belief-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* Achievements Section */
+  .service-achievements-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 5%;
+    background-color: var(--background-color);
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .service-achievement-card {
+    text-align: center;
+    flex: 1 1 200px;
+  }
+  
+  .service-achievement-card h3 {
+    color: var(--accent-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-achievement-card p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .service-belief-services {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-hero-section {
+      height: 60vh;
+    }
+  
+    .service-customer-relationships-section,
+    .service-belief-content {
+      flex-direction: column;
+    }
+  
+    .service-relationships-images {
+      order: -1;
+    }
+  
+    .service-belief-services {
+      grid-template-columns: 1fr;
+    }
+  
+    .service-stat-badge {
+      position: static;
+      margin: -30px auto 1rem;
+      max-width: 200px;
+      transform: translateY(-50%);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-hero-section {
+      height: 50vh;
+    }
+  
+    .service-stat-badge {
+      padding: 0.75rem;
+      min-width: 100px;
+    }
+  }
