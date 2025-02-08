@@ -62,7 +62,7 @@ function App() {
                         <Route path="transactions" element={<TransactionManagement />} />
                         <Route path="reports" element={<ReportsAnalytics />} />
                         <Route path="settings" element={<AdminSettings />} />
-                    </Route> */}
+                    </Route>  */}
 
                     Business Dashboard Routes
                      <Route path="/business" element={<BusinessLayout />}>
@@ -79,8 +79,7 @@ function App() {
           </Routes>
         </main>
 
-        {/* Footer */}
-       
+        
       </div>
     </Router>
   );

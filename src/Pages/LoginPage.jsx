@@ -34,7 +34,7 @@ const LoginPage = () => {
     if (isBusinessLogin) {
       navigate('/business');
     } else {
-      navigate('/admin-dashboard');
+      navigate('/admin');
     }
   };
 
