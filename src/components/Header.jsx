@@ -66,14 +66,14 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            <div className="header-cta-buttons">
+            {/* <div className="header-cta-buttons">
               <Link to="/register" className="header-cta-button register-btn">
                 Register
               </Link>
               <Link to="/login" className="header-cta-button login-btn">
                 Login
               </Link>
-            </div>
+            </div> */}
           </nav>
 
           {/* Mobile Menu Button */}
