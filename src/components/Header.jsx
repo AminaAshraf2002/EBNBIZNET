@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import logoImage from '../assets/ebnbznet.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +47,9 @@ const Header = () => {
       <div className="header-container">
         <div className={`header-wrapper ${isScrolled ? 'header-wrapper-scrolled' : ''}`}>
           {/* Logo */}
-          <Link to="/" className="header-logo">
+          <Link to="./assets/ebnbznet.png" className="header-logo">
+            
+            <img src={logoImage} alt="EBNBIZNET Logo" className="header-logo-image" />
             <span className="header-brand-text">EBNBIZNET</span>
           </Link>
 

@@ -61,7 +61,7 @@ const ContactPage = () => {
                         <div className="contact-info-card" data-aos="fade-right">
                             <MapPin className="contact-info-icon" />
                             <h3>Our Address</h3>
-                            <p>New York, United States</p>
+                            <p>4th floor,dd vapara bhavan kp vallon road, 682020</p>
                             <a
                                 href="https://maps.google.com"
                                 target="_blank"
@@ -74,7 +74,7 @@ const ContactPage = () => {
                         <div className="contact-info-card" data-aos="fade-up">
                             <Phone className="contact-info-icon" />
                             <h3>Phone Number</h3>
-                            <p>+1 (800) EBNBIZ-NET</p>
+                            <p>98958111118</p>
                             <a
                                 href="tel:+18002326294"
                                 className="contact-link"
@@ -85,9 +85,9 @@ const ContactPage = () => {
                         <div className="contact-info-card" data-aos="fade-left">
                             <Mail className="contact-info-icon" />
                             <h3>Email Address</h3>
-                            <p>support@ebnbiznet.com</p>
+                            <p>hello@ebnbiznet.com</p>
                             <a
-                                href="mailto:support@ebnbiznet.com"
+                                href="hello@ebnbiznet.com"
                                 className="contact-link"
                             >
                                 <ExternalLink size={16} /> Send Email

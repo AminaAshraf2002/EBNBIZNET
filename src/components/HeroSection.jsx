@@ -8,7 +8,7 @@ const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      title: "Transform Your Business Growth",
+      title: "Promote Your Business for FREE – Zero Cost, Zero Risk, only smart work. ",
       subtitle: "Your Gateway to Global Business Success",
       description: "Join thousands of businesses expanding their reach worldwide",
       image: image1

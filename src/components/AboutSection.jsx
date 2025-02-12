@@ -8,8 +8,8 @@ const AboutSection = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-image-wrapper">
-            <img 
-              src={about1} 
+            <img
+              src={about1}
               alt="About Us"
               className="about-image"
             />
@@ -18,15 +18,26 @@ const AboutSection = () => {
               <p>Years of Excellence</p>
             </div>
           </div>
-          
+
           <div className="about-text">
             <h2 className="about-title">About EBNBIZNET</h2>
             <p className="about-description">
-              EBNBIZNET is a leading global business promotion platform dedicated to helping 
-              businesses grow and succeed in the digital age. We've helped thousands of 
+              EBNBIZNET is a leading global business promotion platform dedicated to helping
+              businesses grow and succeed in the digital age. We've helped thousands of
               businesses expand their reach and achieve their goals.
+
             </p>
-            <div className="mission-vision-grid">
+            <p className="highlighted-text primary">
+              Join the world's first platform to market your products and services without any upfront fees,
+              membership costs, or hidden charges. It's a win-win for all who want grow your business,
+              reach a global audience, and enjoy unlimited opportunities without any financial risk.
+            </p>
+
+            <p className="highlighted-text secondary">
+              Be part of this revolutionary change! Call us and sign up now and start a success journey.
+            </p>
+           
+            <div className="stats-grid mission-vision-grid"> {/* Add the stats-grid class here */}
               {[
                 {
                   title: "Our Mission",
@@ -37,7 +48,7 @@ const AboutSection = () => {
                   content: "To become the world's leading platform for business growth and success"
                 }
               ].map((item, index) => (
-                <div key={index} className="mission-card">
+                <div key={index} className="stat-card mission-card"> {/* Add the stat-card class here */}
                   <h3 className="mission-card-title">
                     <span className="mission-card-number">0{index + 1}.</span>
                     {item.title}

@@ -44,9 +44,36 @@
     padding: 0.5rem 1.5rem;
   }
   
-  .header-logo {
-    text-decoration: none;
+ /* Add these styles to your existing CSS */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between logo and text */
+  text-decoration: none;
+}
+
+.header-logo-image {
+  height: 2.5rem; /* Adjust this value based on your needs */
+  width: auto;
+  object-fit: contain;
+  transition: var(--header-transition);
+}
+
+/* Optional: Scale down logo slightly when header is scrolled */
+.header-scrolled .header-logo-image {
+  height: 2rem;
+}
+
+/* Ensure logo looks good on mobile */
+@media (max-width: 768px) {
+  .header-logo-image {
+    height: 2rem;
   }
+  
+  .header-logo {
+    gap: 0.5rem;
+  }
+}
   
   .header-brand-text {
     font-size: 1.5rem;
