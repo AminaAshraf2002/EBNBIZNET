@@ -36,17 +36,20 @@ const Footer = () => {
       { name: 'Instagram', icon: InstagramIcon, link: '#instagram' }
     ],
     contact: [
-      { 
-        icon: MapPin, 
-        content: '123 Business Street, New York, NY 10001' 
+      {
+        icon: MapPin,
+        content: '4th floor , dd vapara bhavan kp vallon road 682020',
+        link: 'https://maps.google.com/?q=4th floor , dd vapara bhavan kp vallon road 682020'
       },
-      { 
-        icon: Phone, 
-        content: '+1 (555) 123-4567' 
+      {
+        icon: Phone,
+        content: '98958111118',
+        link: 'tel:98958111118'
       },
-      { 
-        icon: Mail, 
-        content: 'contact@ebnbiznet.com' 
+      {
+        icon: Mail,
+        content: 'hello@ebnbiznet.com',
+        link: 'mailto:hello@ebnbiznet.com'
       }
     ]
   };
@@ -116,9 +119,16 @@ const Footer = () => {
                 {footerLinks.contact.map((item, index) => {
                   const ContactIcon = item.icon;
                   return (
-                    <li key={index} className="footer-contact-item">
-                      <ContactIcon size={20} className="footer-contact-icon" />
-                      <span>{item.content}</span>
+                    <li key={index}>
+                      <a
+                        href={item.link}
+                        className="footer-contact-item"
+                        target={item.icon === MapPin ? "_blank" : "_self"}
+                        rel={item.icon === MapPin ? "noopener noreferrer" : ""}
+                      >
+                        <ContactIcon size={20} className="footer-contact-icon" />
+                        <span>{item.content}</span>
+                      </a>
                     </li>
                   );
                 })}
@@ -155,9 +165,9 @@ const Footer = () => {
             </p>
             <div className="footer-bottom-links">
               {footerLinks.legal.map((link) => (
-                <a 
+                <a
                   key={link.name}
-                  href={link.link} 
+                  href={link.link}
                   className="footer-bottom-link"
                 >
                   {link.name}
